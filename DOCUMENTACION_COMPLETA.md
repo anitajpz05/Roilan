@@ -1,6 +1,7 @@
-# 📚 DOCUMENTACIÓN COMPLETA - Sistema de Gestión de Turnos
+#  DOCUMENTACIÓN COMPLETA - Sistema de Gestión de Turnos
 
-## 🎯 Información General del Proyecto
+## 
+Información General del Proyecto
 
 **Nombre del Proyecto:** Sistema de Gestión de Turnos  
 **Tipo:** Aplicación Web Frontend-Only  
@@ -8,16 +9,14 @@
 **Estado:** ✅ Completamente Funcional  
 **Última Actualización:** Abril 2026  
 
----
-
-## 🚀 Inicio Rápido
+##  Inicio Rápido
 
 ### 1. Ejecutar la Aplicación
 ```bash
 cd d:\Ana\Tarea\shifts-management
-npm install    # Instalar dependencias
-npm run dev    # Iniciar servidor desarrollo
-```# Si necesitas reiniciar:
+npm install   
+npm run dev    
+```
 npm run dev
 npm run build
 
@@ -34,11 +33,9 @@ npm run build
 - ✅ Autenticación con sesión persistente
 - ✅ Interfaz moderna con gradientes
 
----
 
-## 📁 Estructura Completa del Proyecto
+##  Estructura Completa del Proyecto
 
-```
 shifts-management/
 ├── 📁 src/
 │   ├── 📁 components/          # Componentes reutilizables (8 archivos)
@@ -119,7 +116,7 @@ shifts-management/
 
 ---
 
-## 📋 Dependencias y Configuración
+##  Dependencias y Configuración
 
 ### package.json
 ```json
@@ -178,9 +175,8 @@ export default defineConfig({
 </html>
 ```
 
----
 
-## 🗄️ Base de Datos - IndexedDB (Dexie.js)
+##  Base de Datos - IndexedDB (Dexie.js)
 
 ### Esquema de Base de Datos
 
@@ -234,7 +230,7 @@ db.version(1).stores({
 
 ---
 
-## 🔐 Sistema de Autenticación
+##  Sistema de Autenticación
 
 ### AuthContext.jsx - Estado Global
 
@@ -312,7 +308,7 @@ export function ProtectedRoute({ children }) {
 
 ---
 
-## 🎣 Custom Hooks Implementados
+##  Custom Hooks Implementados
 
 ### 1. useAuth() - Acceso a Autenticación
 
@@ -384,7 +380,6 @@ await storage.getUsuarioByEmail(email);
 - ✅ Eliminación en cascada (reservas al eliminar turno)
 - ✅ Métodos asíncronos para operaciones complejas
 
----
 
 ### 3. useTurnos() - Lógica de Negocio de Turnos
 
@@ -412,7 +407,6 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 };
 ```
 
----
 
 ### 4. useReservas() - Lógica de Reservas
 
@@ -423,9 +417,8 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Creación de reservas con datos del cliente
 - ✅ Cancelación de reservas
 
----
 
-## 🖥️ Componentes Principales
+##  Componentes Principales
 
 ### Layouts
 
@@ -460,10 +453,9 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Diseño responsivo (colapsa en móvil)
 
 **Navegación:**
-- 📅 Gestión de Turnos (`/admin/turnos`)
-- 📋 Listado de Reservas (`/admin/reservas`)
+-  Gestión de Turnos (`/admin/turnos`)
+-  Listado de Reservas (`/admin/reservas`)
 
----
 
 ### Páginas
 
@@ -478,10 +470,10 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Enlace al login de admin
 
 **Interfaz:**
-- 📅 Agrupación por fechas
-- 🕐 Horarios con iconos
-- 👥 Indicador de capacidad
-- 🎫 Botón "Reservar Turno"
+-  Agrupación por fechas
+-  Horarios con iconos
+-  Indicador de capacidad
+-  Botón "Reservar Turno"
 
 #### Login.jsx - Autenticación
 **Ubicación:** `src/pages/Login.jsx`
@@ -518,7 +510,6 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Opción de cancelar reservas
 - ✅ Confirmación antes de cancelar
 
----
 
 ### Componentes Reutilizables
 
@@ -564,11 +555,11 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 **Ubicación:** `src/components/FormularioTurno.jsx`
 
 **Campos:**
-- 📅 Fecha
-- 🕐 Hora inicio
-- 🕐 Hora fin
-- 👥 Capacidad máxima
-- 🔄 Estado (activo/inactivo)
+-  Fecha
+-  Hora inicio
+-  Hora fin
+-  Capacidad máxima
+-  Estado (activo/inactivo)
 
 **Validaciones:**
 - ✅ Campos requeridos
@@ -579,8 +570,8 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 **Ubicación:** `src/components/FormularioReserva.jsx`
 
 **Campos:**
-- 👤 Nombre completo
-- 🆔 Carnet de identidad
+-  Nombre completo
+-  Carnet de identidad
 
 **Validaciones:**
 - ✅ Nombre requerido
@@ -604,9 +595,7 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Cierre automático opcional
 - ✅ Iconos según tipo
 
----
-
-## 🎨 Sistema de Estilos (CSS con Gradientes)
+## Sistema de Estilos (CSS con Gradientes)
 
 ### Variables CSS Globales
 **Ubicación:** `src/styles/global.css`
@@ -653,9 +642,7 @@ const validarSolapamiento = (nuevoTurno, turnosExistentes) => {
 - ✅ Componentes flexibles
 - ✅ Tipografía escalable
 
----
-
-## 🛣️ Sistema de Rutas (React Router v6)
+## Sistema de Rutas (React Router v6)
 
 ### Configuración en App.jsx
 
@@ -702,9 +689,8 @@ function App() {
 | `/admin` | - | Redirect | ✅ | Redirige a `/admin/turnos` |
 | `*` | - | Redirect | ❌ | Redirige a `/` |
 
----
 
-## 🔧 Configuración y Despliegue
+## Configuración y Despliegue
 
 ### Desarrollo Local
 ```bash
@@ -732,7 +718,7 @@ npm run preview  # Vista previa de build
 
 ---
 
-## 🧪 Testing y Debugging
+##  Testing y Debugging
 
 ### Scripts de Testing
 - `test-app.mjs` - Pruebas con Playwright (navegador real)
@@ -751,9 +737,7 @@ npm run preview  # Vista previa de build
 - ✅ Validaciones de negocio
 - ✅ Navegación y rutas
 
----
-
-## 📊 Estadísticas del Proyecto
+## Estadísticas del Proyecto
 
 ### Código Fuente
 - **Archivos:** 28 archivos principales
@@ -782,7 +766,7 @@ npm run preview  # Vista previa de build
 
 ---
 
-## 🎯 Checklist de Requisitos Cumplidos
+## Checklist de Requisitos Cumplidos
 
 ### ✅ Requisitos Funcionales
 - ✅ Pantalla de visualización de turnos públicos
@@ -809,34 +793,32 @@ npm run preview  # Vista previa de build
 - ✅ Interfaz moderna
 - ✅ Documentación completa
 
----
 
-## 🚀 Próximos Pasos y Mejoras
+##  Próximos Pasos y Mejoras
 
 ### Funcionalidades Adicionales
-- 📧 Notificaciones por email (requeriría backend)
-- 📱 PWA (Progressive Web App)
-- 🌙 Modo oscuro
-- 📊 Dashboard con estadísticas
-- 🔍 Búsqueda y filtros avanzados
+- Notificaciones por email (requeriría backend)
+-  PWA (Progressive Web App)
+-  Modo oscuro
+-  Dashboard con estadísticas
+-  Búsqueda y filtros avanzados
 
 ### Mejoras Técnicas
-- 🧪 Tests unitarios con Jest
-- 📝 TypeScript migration
-- 🚀 Service Worker para offline
-- 📈 Performance monitoring
-- 🔒 Seguridad adicional
+-  Tests unitarios con Jest
+-  TypeScript migration
+-  Service Worker para offline
+-  Performance monitoring
+-  Seguridad adicional
 
 ### Mejoras de UX/UI
-- 🎨 Animaciones más sofisticadas
-- 📱 Mejor experiencia móvil
-- ♿ Accesibilidad (WCAG)
-- 🌍 Internacionalización (i18n)
-- 🎯 Microinteracciones
+- Animaciones más sofisticadas
+- Mejor experiencia móvil
+- Accesibilidad (WCAG)
+- Internacionalización (i18n)
+- Microinteracciones
 
----
 
-## 📞 Soporte y Contacto
+##  Soporte y Contacto
 
 **Estado del Proyecto:** ✅ Completamente funcional y documentado
 
@@ -846,6 +828,5 @@ npm run preview  # Vista previa de build
 
 **Compatibilidad:** Navegadores modernos con soporte IndexedDB
 
----
 
 *Esta documentación consolida toda la información del proyecto Sistema de Gestión de Turnos en un solo archivo de referencia completa.*
