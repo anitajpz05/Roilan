@@ -1,0 +1,43 @@
+.formulario-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formulario-reserva .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-reserva label {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #1a3a52;
+  font-size: 0.95rem;
+  letter-spacing: -0.2px;
+}
+
+.formulario-reserva input {
+  padding: 14px 16px;
+  border: 2px solid #e8eef5;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #f8fafb;
+}
+
+.formulario-reserva input:focus {
+  outline: none;
+  border-color: #0f7490;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(15, 116, 144, 0.1);
+  transform: translateY(-2px);
+}
+
+.formulario-reserva input:disabled {
+  background-color: #f0f4f8;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #d9e3ec;
+}

@@ -1,0 +1,68 @@
+.crud-turnos {
+  padding: 0;
+}
+
+.crud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.crud-header h2 {
+  font-size: 2.2rem;
+  color: #1a3a52;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.estado-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.estado-activo {
+  background: linear-gradient(135deg, #c7f0d8 0%, #a5e8c5 100%);
+  color: #0d5f49;
+  border: 2px solid #2ecc9b;
+}
+
+.estado-activo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 155, 0.2);
+}
+
+.estado-inactivo {
+  background: linear-gradient(135deg, #f5d1d1 0%, #f0b8b8 100%);
+  color: #7a3a3a;
+  border: 2px solid #e67e7e;
+}
+
+.estado-inactivo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 126, 126, 0.2);
+}
+
+@media (max-width: 768px) {
+  .crud-header {
+    flex-direction: column;
+  }
+
+  .crud-header h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .crud-header .btn {
+    width: 100%;
+  }
+}
