@@ -1,4 +1,4 @@
-// Exportar todos los componentes
+
 export { Modal } from './Modal';
 export { FormularioTurno } from './FormularioTurno';
 export { FormularioReserva } from './FormularioReserva';
